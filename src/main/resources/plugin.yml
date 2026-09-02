@@ -1,0 +1,15 @@
+name: TownySubscriptionsBridge
+version: 1.2.0
+main: net.townysmp.subscriptions.TownySubscriptionsBridge
+api-version: '1.21'
+authors: [TownySMP]
+description: Enforces TownySMP subscription home, vault and QuickShop expiry limits.
+depend: [QuickShop-Hikari, LuckPerms]
+softdepend: [Essentials, AxVaults]
+permissions:
+  townysmp.subscriptions.bypass:
+    description: Bypasses home, vault and over-limit shop restrictions.
+    default: op
+  townysmp.subscriptions.shops.extra.5:
+    description: Adds five permanent shop slots to the current rank, up to 50.
+    default: false

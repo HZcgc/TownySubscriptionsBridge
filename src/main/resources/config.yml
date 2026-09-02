@@ -1,0 +1,67 @@
+# TownySMP subscription protections
+
+bypass-permission: townysmp.subscriptions.bypass
+
+home:
+  enabled: true
+  fallback-limit: 5
+  unlimited-permission: townysmp.subscriptions.homes.unlimited
+  restricted-commands:
+    - home
+    - ehome
+    - sethome
+    - esethome
+  # Essentials treats /homes as an alias of /home. The bridge replaces it with
+  # a real list so it never teleports the player or triggers spawn-if-no-home.
+  list-commands:
+    - homes
+    - ehomes
+  limit-permissions:
+    - '30:townysmp.subscriptions.homes.30'
+    - '22:townysmp.subscriptions.homes.22'
+    - '16:townysmp.subscriptions.homes.16'
+    - '12:townysmp.subscriptions.homes.12'
+    - '8:townysmp.subscriptions.homes.8'
+    - '5:townysmp.subscriptions.homes.5'
+
+vault:
+  enabled: true
+  fallback-write-limit: 2
+  holder-class: com.artillexstudios.axvaults.vaults.Vault
+  write-limit-permissions:
+    - '16:townysmp.subscriptions.vaults.write.16'
+    - '12:townysmp.subscriptions.vaults.write.12'
+    - '8:townysmp.subscriptions.vaults.write.8'
+    - '6:townysmp.subscriptions.vaults.write.6'
+    - '4:townysmp.subscriptions.vaults.write.4'
+    - '2:townysmp.subscriptions.vaults.write.2'
+
+shop:
+  enabled: true
+  fallback-limit: 10
+  # These are the existing QuickShop rank permissions. No extra LuckPerms
+  # import is needed when only the bridge JAR/config are being updated.
+  limit-permissions:
+    - '50:quickshop.limit.wither'
+    - '40:quickshop.limit.dragon'
+    - '30:quickshop.limit.blaze'
+    - '20:quickshop.limit.creeper'
+    - '15:quickshop.limit.skeleton'
+  extra:
+    # Permanent, one-time Tebex add-on. It follows the player when a paid rank
+    # starts or expires, but never raises the total above 50.
+    permission: townysmp.subscriptions.shops.extra.5
+    amount: 5
+    absolute-max: 50
+
+messages:
+  prefix: '&#FF55FF&lTOWNY&#55FF55&lSMP &8» &r&7'
+  home-over-limit: 'You have &d%current%&7 homes, but your current limit is &a%limit%&7. Use &d/delhome <name>&7 until you are back within the limit.'
+  homes-list: 'Your homes (&d%current%&7/&a%limit%&7): %homes%'
+  no-homes: 'You do not have any homes yet. Use &d/sethome <name>&7 in the survival world.'
+  vault-read-only: 'Vault &d#%vault%&7 is withdrawal-only. You may remove items, but you cannot store anything new.'
+  shop-over-limit: 'This shop is paused because its owner has &d%current%&7 shops, but their current limit is &a%limit%&7.'
+  shop-owner-over-limit: 'Your &d%current%&7 shops are paused because your current limit is &a%limit%&7. Remove &d%excess%&7 shop(s) to resume trading.'
+  shop-profile-loading: "This shop's owner permissions are loading. Please try again in a moment."
+  shop-protection-unavailable: 'Shop protection is temporarily unavailable. Please try again shortly.'
+  cooldown-milliseconds: 1500
