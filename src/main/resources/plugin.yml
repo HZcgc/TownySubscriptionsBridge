@@ -1,9 +1,9 @@
 name: TownySubscriptionsBridge
-version: 1.2.0
+version: ${project.version}
 main: net.townysmp.subscriptions.TownySubscriptionsBridge
-api-version: '1.21'
-authors: [TownySMP]
-description: Enforces TownySMP subscription home, vault and QuickShop expiry limits.
+api-version: '26.2'
+authors: [TownyReborn]
+description: Enforces TownyReborn subscription home, vault and QuickShop expiry limits.
 depend: [QuickShop-Hikari, LuckPerms]
 softdepend: [Essentials, AxVaults]
 permissions:

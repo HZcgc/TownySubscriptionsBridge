@@ -92,7 +92,7 @@ public final class TownySubscriptionsBridge extends JavaPlugin implements Listen
       this.getServer().getPluginManager().registerEvents(this, this);
       this.getLogger()
          .info(
-            "TownySMP subscription protections enabled: homes="
+            "TownyReborn subscription protections enabled: homes="
                + this.homeProtectionEnabled
                + ", withdrawal-only vaults="
                + this.vaultProtectionEnabled
@@ -116,7 +116,7 @@ public final class TownySubscriptionsBridge extends JavaPlugin implements Listen
       this.extraShopPermission = var1.getString("shop.extra.permission", "townysmp.subscriptions.shops.extra.5");
       this.unlimitedHomesPermission = var1.getString("home.unlimited-permission", "townysmp.subscriptions.homes.unlimited");
       this.vaultHolderClassName = var1.getString("vault.holder-class", "com.artillexstudios.axvaults.vaults.Vault");
-      this.prefix = color(var1.getString("messages.prefix", "&#FF55FF&lTOWNY&#55FF55&lSMP &8» &r&7"));
+      this.prefix = color(var1.getString("messages.prefix", "&#FF55FF&lTOWNY&#55FF55&lREBORN &8» &r&7"));
       this.homeBlockedMessage = color(
          var1.getString(
             "messages.home-over-limit",

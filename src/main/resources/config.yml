@@ -1,4 +1,4 @@
-# TownySMP subscription protections
+# TownyReborn subscription protections
 
 bypass-permission: townysmp.subscriptions.bypass
 
@@ -55,7 +55,7 @@ shop:
     absolute-max: 50
 
 messages:
-  prefix: '&#FF55FF&lTOWNY&#55FF55&lSMP &8» &r&7'
+  prefix: '&#FF55FF&lTOWNY&#55FF55&lREBORN &8» &r&7'
   home-over-limit: 'You have &d%current%&7 homes, but your current limit is &a%limit%&7. Use &d/delhome <name>&7 until you are back within the limit.'
   homes-list: 'Your homes (&d%current%&7/&a%limit%&7): %homes%'
   no-homes: 'You do not have any homes yet. Use &d/sethome <name>&7 in the survival world.'
