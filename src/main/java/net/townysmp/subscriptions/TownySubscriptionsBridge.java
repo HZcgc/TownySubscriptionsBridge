@@ -217,7 +217,7 @@ public final class TownySubscriptionsBridge extends JavaPlugin implements Listen
    }
 
    private void rebuildShopCounts() {
-      ConcurrentHashMap var1 = new ConcurrentHashMap();
+      Map<UUID, Integer> var1 = new ConcurrentHashMap<>();
 
       for (Shop var3 : this.quickShop.getShopManager().getAllShops()) {
          UUID var4 = this.realOwnerId(var3);
@@ -415,7 +415,7 @@ public final class TownySubscriptionsBridge extends JavaPlugin implements Listen
    }
 
    private TownySubscriptionsBridge.ShopPermissionProfile profileFromLuckPerms(User var1) {
-      Predicate var2 = var1x -> var1.getCachedData().getPermissionData().checkPermission(var1x).asBoolean();
+      Predicate<String> var2 = var1x -> var1.getCachedData().getPermissionData().checkPermission(var1x).asBoolean();
       return new TownySubscriptionsBridge.ShopPermissionProfile(
          this.resolveShopLimit(var2), this.bypassPermission != null && !this.bypassPermission.isBlank() && var2.test(this.bypassPermission)
       );
