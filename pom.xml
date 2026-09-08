@@ -35,7 +35,7 @@
     <dependency>
       <groupId>com.ghostchu</groupId>
       <artifactId>quickshop-bukkit</artifactId>
-      <version>6.3.0.2</version>
+      <version>6.3.0.0</version>
       <classifier>shaded</classifier>
       <scope>provided</scope>
     </dependency>

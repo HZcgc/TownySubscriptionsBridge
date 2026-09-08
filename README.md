@@ -20,8 +20,9 @@ The active TownyReborn defaults are retained in
 The original source project was no longer present. These Java sources were
 recovered from the deployed `TownySubscriptionsBridge.jar` with Vineflower
 1.12.0. Control flow and permission rules were preserved, then a reproducible
-Maven build against Paper 26.2, QuickShop-Hikari 6.3.0.2 and LuckPerms 5.5 was
-added for the TownyReborn 1.3.1 release.
+Maven build against Paper 26.2, the published QuickShop-Hikari 6.3.0.0 API and
+LuckPerms 5.5 was added for the TownyReborn 1.3.1 release. Runtime remains
+compatible with the server's QuickShop-Hikari 6.3.0.2 build.
 
 Deployed JAR SHA-256:
 
